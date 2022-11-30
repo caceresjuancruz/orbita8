@@ -6,7 +6,7 @@ function Features() {
     <ul className="list-unstyled vstack gap-3">
       <div className="row d-flex align-items-center my-5">
         <div className="col-md-1 position-relative">
-          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle">
+          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle icon">
             <FaDesktop className="text-white" size={60} />
           </div>
         </div>
@@ -17,7 +17,7 @@ function Features() {
 
       <div className="row d-flex align-items-center my-5">
         <div className="col-md-1 position-relative">
-          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle">
+          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle icon">
             <FaShoppingCart className="text-white" size={60} />
           </div>
         </div>
@@ -28,7 +28,7 @@ function Features() {
 
       <div className="row d-flex align-items-center my-5">
         <div className="col-md-1 position-relative">
-          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle">
+          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle icon">
             <FaTools className="text-white" size={60} />
           </div>
         </div>
@@ -41,7 +41,7 @@ function Features() {
 
       <div className="row d-flex align-items-center my-5">
         <div className="col-md-1 position-relative">
-          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle">
+          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle icon">
             <FaSearch className="text-white" size={60} />
           </div>
         </div>
@@ -49,6 +49,19 @@ function Features() {
           <li className="fs-1 fw-bold ms-4">Posicionamiento en Buscadores</li>
         </div>
       </div>
+      <style jsx>
+        {`
+          .icon {
+            display: none;
+          }
+
+          @media (min-width: 768px) {
+            .icon {
+              display: inline;
+            }
+          }
+        `}
+      </style>
     </ul>
   );
 }
