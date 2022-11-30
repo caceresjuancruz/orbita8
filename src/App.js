@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Features from "./components/Features";
-import Formulario from "./components/Formulario";
+import ContactForm from "./components/ContactForm";
 import Main from "./components/Main";
 import Portfolio from "./components/Portfolio";
 
@@ -20,11 +20,13 @@ function App() {
               </Routes>
             </div>
             <div className="col-12 col-md-3 vh-100 p-0">
-              <Routes>
-                <Route path="/" element={<Features />} />
-                <Route path="/form" element={<Formulario />} />
-                <Route path="/portfolio" element={<Features />} />
-              </Routes>
+              <div className="container">
+                <Routes>
+                  <Route path="/" element={<Features />} />
+                  <Route path="/form" element={<ContactForm />} />
+                  <Route path="/portfolio" element={<Features />} />
+                </Routes>
+              </div>
             </div>
           </div>
         </div>
