@@ -55,7 +55,7 @@ function ContactForm() {
     <div className="d-flex min-vh-100">
       <div className="m-2 p-2 w-100 rounded-4" id="form-container">
         <div className="d-flex align-items-center mb-3">
-          <h1 className="d-inline-block">Contacto</h1>
+          <h1 className="d-inline-block w-100 text-center btnSeccion">- Contacto -</h1>
           <NavLink to="/" className="text-dark d-inline-block ms-auto">
             <TfiClose className="" size={30} />
           </NavLink>
@@ -64,31 +64,34 @@ function ContactForm() {
         <form ref={form} onSubmit={sendEmail}>
           <div className="mb-3">
             <input
+              class="form__input"
               type="text"
-              className="form-control-lg w-100"
               name="user_name"
               placeholder="Nombre"
               required
             />
+            <label for="name" class="form__label">Nombre</label>
           </div>
           <div className="mb-3">
             <input
+              class="form__input"
               type="email"
-              className="form-control-lg w-100"
               name="user_email"
               placeholder="Email"
               required
             />
+            <label for="name" class="form__label">Email</label>
           </div>
 
           <div className="mb-3">
             <textarea
-              className="form-control-lg w-100"
+              class="form__input"
               name="message"
               rows="3"
               placeholder="Mensaje"
               required
             ></textarea>
+            <label for="name" class="form__label">Mensaje</label>
           </div>
 
           <button
@@ -113,6 +116,48 @@ function ContactForm() {
           </button>
         </form>
       </div>
+      <style jsx>
+        {`
+          .form__label {
+            font-size: 1rem;
+            margin-left: 2rem;
+            margin-top: 0.7rem;
+            display: block;
+            transition: all 0.3s;
+            transform: translateY(0rem);
+            color: rgb(125,125,200);
+          }
+          
+          .form__input {
+            color: rgba(0,0,0,0.9);
+            font-size: 1.2rem;
+            margin: 0 auto;
+            padding: 0.8rem 2rem;
+            border-radius: 0.2rem;
+            background-color: rgb(240, 240, 240);
+            border: none;
+            width: 100%;
+            display: block;
+            border-bottom: 0.14rem solid rgb(125,125,200);
+            transition: all 0.3s;
+          }
+          
+          .form__input:placeholder-shown + .form__label {
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transform: translateY(-4rem);
+            transform: translateY(-4rem);
+          }
+
+          textarea:focus, input:focus{
+            outline: none;
+          }
+
+          .btnSeccion{
+            color: rgba(0,0,0,0.8);
+          }
+        `}
+      </style>
     </div>
   );
 }

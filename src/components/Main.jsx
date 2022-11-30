@@ -30,19 +30,23 @@ function Main() {
       </h5>
       <NavLink to="/form">
         <button
-          className="btn btn-lg btn-danger fw-bold rounded-4 mx-2 btn-main"
+          className="btn btn-lg btn-danger fw-bold rounded-4 mx-2 btn-main shadow"
           onClick={() => window.scrollTo(0, document.body.scrollHeight)}
         >
           <h3 className="fw-bold fs-1">Quiero mi web</h3>
         </button>
       </NavLink>
       <NavLink to="/portfolio">
-        <button className="btn btn-lg btn-light fw-bold rounded-4 mx-2 btn-main">
+        <button className="btn btn-outline-primary bg-white fw-bold rounded-4 mx-2 btn-main shadow">
           <h3 className="fw-light fs-1">Nuestros trabajos</h3>
         </button>
       </NavLink>
       <style jsx>
-        {`
+        {`        
+          #root{
+            font-family: 'Source Sans Pro', sans-serif;
+          }
+
           .btn-main {
             margin-top: 1rem;
           }
