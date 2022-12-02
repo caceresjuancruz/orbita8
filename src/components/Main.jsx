@@ -37,22 +37,25 @@ function Main() {
 
       <NavLink to="/form" className="container-one">
         <button
-          className="btn btn-lg fw-bold rounded-4 mx-2 btn-main shadow-lg position-relative animate__animated animate__backInUp"
+          className="btn btn-lg fw-bold rounded-4 mx-2 btn-main shadow-lg position-relative animate__animated animate__slideInUp animate__slow"
           onClick={() => window.scrollTo(0, document.body.scrollHeight)}
           style={{ overflow: "hidden" }}
         >
-          <h3 className="fw-bold fs-1 text-light">Quiero mi sitio</h3>
+          <h3 className="fw-bold display-5 text-light">Quiero mi sitio</h3>
           <div className="fill-one"></div>
         </button>
       </NavLink>
       <NavLink to="/portfolio">
-        <button className="btn bg-white rounded-4 mx-2 btn-main shadow-lg animate__animated animate__backInUp">
-          <h3 className="fw-light fs-1">Nuestros trabajos</h3>
+        <button
+          className="btn bg-white rounded-4 mx-2 btn-main shadow-lg animate__animated animate__slideInUp animate__slow"
+          style={{ animationDuration: "2.5s" }}
+        >
+          <h3 className="fw-light display-6">Nuestros trabajos</h3>
         </button>
       </NavLink>
       <IoIosArrowDropdownCircle
-        className="mx-auto mt-5 text-light mainIcon animate__animated animate__bounceInUp"
-        size={80}
+        className="mx-auto mt-5 border rounded-circle shadow-lg p-0 text-light mainIcon animate__animated animate__bounceInUp"
+        size={60}
         onClick={() => window.scrollTo(0, document.body.scrollHeight)}
         style={{ animationDuration: "3s" }}
       />

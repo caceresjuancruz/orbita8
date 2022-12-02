@@ -32,7 +32,7 @@ function Features() {
             <img
               className="animate__animated animate__rotateIn"
               src={CardImg}
-              style={{ width: "7rem" }}
+              style={{ width: "7rem", animationDuration: "2s" }}
               alt="Card"
             />
           </div>
@@ -50,7 +50,7 @@ function Features() {
             <img
               className="animate__animated animate__rotateIn"
               src={SettingsImg}
-              style={{ width: "7rem" }}
+              style={{ width: "7rem", animationDuration: "3s" }}
               alt="Settings"
             />
           </div>
@@ -68,7 +68,7 @@ function Features() {
             <img
               className="animate__animated animate__rotateIn"
               src={ZoomImg}
-              style={{ width: "7rem" }}
+              style={{ width: "7rem", animationDuration: "4s" }}
               alt="Zoom"
             />
           </div>

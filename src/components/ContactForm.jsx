@@ -53,10 +53,13 @@ function ContactForm() {
   };
 
   return (
-    <div className="d-flex min-vh-100 animate__animated animate__bounceInDown">
+    <div
+      className="d-flex  animate__animated animate__bounceInDown"
+      style={{ marginTop: "5rem" }}
+    >
       <div className="m-2 p-2 w-100 rounded-4" id="form-container">
         <div className="d-flex align-items-center mb-3">
-          <h1 className="d-inline-block w-100 text-center btnSeccion fw-bold">
+          <h1 className="d-inline-block w-100 text-center btnSeccion fw-bold text-light">
             Contacto
           </h1>
           <NavLink
@@ -64,14 +67,14 @@ function ContactForm() {
             className="text-dark d-inline-block ms-auto"
             onClick={() => window.scrollTo(0, 0)}
           >
-            <TfiClose className="" size={30} />
+            <TfiClose className="text-light" size={30} />
           </NavLink>
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
           <div className="mb-3">
             <input
-              class="form__input"
+              class="form__input rounded-3 shadow-lg"
               type="text"
               name="user_name"
               placeholder="Nombre"
@@ -83,7 +86,19 @@ function ContactForm() {
           </div>
           <div className="mb-3">
             <input
-              class="form__input"
+              class="form__input rounded-3 shadow-lg"
+              type="text"
+              name="user_phone"
+              placeholder="Telefono"
+              required
+            />
+            <label for="name" class="form__label">
+              Telefono
+            </label>
+          </div>
+          <div className="mb-3">
+            <input
+              class="form__input rounded-3 shadow-lg"
               type="email"
               name="user_email"
               placeholder="Email"
@@ -96,7 +111,7 @@ function ContactForm() {
 
           <div className="mb-3">
             <textarea
-              class="form__input"
+              class="form__input rounded-3 shadow-lg"
               name="message"
               rows="3"
               placeholder="Mensaje"
@@ -109,7 +124,7 @@ function ContactForm() {
 
           <button
             type="submit"
-            className={`btn btn-lg w-100 ${
+            className={`btn btn-lg rounded-3 shadow-lg w-100 ${
               successAnimationStopped ? "btn-send" : "btn-success"
             }`}
             style={{ height: "5rem" }}

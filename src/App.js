@@ -10,9 +10,9 @@ function App() {
     <div className="App">
       <Router>
         <div className="container-fluid">
-          <div className="row">
+          <div className="row bg">
             <div
-              className="col-12 col-xl-9 vh-100 text-center bg p-0"
+              className="col-12 col-xl-9 vh-100 text-center p-0"
               id="main-col"
             >
               <Routes>
@@ -20,7 +20,10 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />} />
               </Routes>
             </div>
-            <div className="col-12 col-xl-3 vh-100 p-0 shadow-lg">
+            <div
+              className="col-12 col-xl-3 vh-100 p-0 "
+              style={{ background: "transparent" }}
+            >
               <div className="container">
                 <Routes>
                   <Route path="/" element={<Features />} />
