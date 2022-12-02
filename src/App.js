@@ -11,7 +11,7 @@ function App() {
         <div className="container-fluid">
           <div className="row">
             <div
-              className="col-12 col-md-9 vh-100 text-center bg"
+              className="col-12 col-xl-9 vh-100 text-center bg p-0"
               id="main-col"
             >
               <Routes>
@@ -19,7 +19,7 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />} />
               </Routes>
             </div>
-            <div className="col-12 col-md-3 vh-100 p-0">
+            <div className="col-12 col-xl-3 vh-100 p-0">
               <div className="container">
                 <Routes>
                   <Route path="/" element={<Features />} />

@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { TfiClose } from "react-icons/tfi";
 import emailjs from "@emailjs/browser";
@@ -16,6 +16,7 @@ function ContactForm() {
       setSuccessAnimationStopped(true);
       navigate("/");
       document.getElementById("alerta").style.display = "inline";
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }, 2000);
   };
 
@@ -55,8 +56,14 @@ function ContactForm() {
     <div className="d-flex min-vh-100">
       <div className="m-2 p-2 w-100 rounded-4" id="form-container">
         <div className="d-flex align-items-center mb-3">
-          <h1 className="d-inline-block w-100 text-center btnSeccion">- Contacto -</h1>
-          <NavLink to="/" className="text-dark d-inline-block ms-auto">
+          <h1 className="d-inline-block w-100 text-center btnSeccion fw-bold">
+            Contacto
+          </h1>
+          <NavLink
+            to="/"
+            className="text-dark d-inline-block ms-auto"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <TfiClose className="" size={30} />
           </NavLink>
         </div>
@@ -70,7 +77,9 @@ function ContactForm() {
               placeholder="Nombre"
               required
             />
-            <label for="name" class="form__label">Nombre</label>
+            <label for="name" class="form__label">
+              Nombre
+            </label>
           </div>
           <div className="mb-3">
             <input
@@ -80,7 +89,9 @@ function ContactForm() {
               placeholder="Email"
               required
             />
-            <label for="name" class="form__label">Email</label>
+            <label for="name" class="form__label">
+              Email
+            </label>
           </div>
 
           <div className="mb-3">
@@ -91,20 +102,22 @@ function ContactForm() {
               placeholder="Mensaje"
               required
             ></textarea>
-            <label for="name" class="form__label">Mensaje</label>
+            <label for="name" class="form__label">
+              Mensaje
+            </label>
           </div>
 
           <button
             type="submit"
             className={`btn btn-lg w-100 ${
-              successAnimationStopped ? "btn-primary" : "btn-success"
+              successAnimationStopped ? "btn-send" : "btn-success"
             }`}
             style={{ height: "5rem" }}
           >
             {successAnimationStopped ? (
-              <Fragment>
+              <div className="text-light fs-4 fw-bold">
                 Enviar <i class="bi bi-send-fill"></i>
-              </Fragment>
+              </div>
             ) : (
               <Lottie
                 options={defaultOptions}
@@ -125,11 +138,11 @@ function ContactForm() {
             display: block;
             transition: all 0.3s;
             transform: translateY(0rem);
-            color: rgb(125,125,200);
+            color: rgb(125, 125, 200);
           }
-          
+
           .form__input {
-            color: rgba(0,0,0,0.9);
+            color: rgba(0, 0, 0, 0.9);
             font-size: 1.2rem;
             margin: 0 auto;
             padding: 0.8rem 2rem;
@@ -138,10 +151,10 @@ function ContactForm() {
             border: none;
             width: 100%;
             display: block;
-            border-bottom: 0.14rem solid rgb(125,125,200);
+            border-bottom: 0.14rem solid rgb(125, 125, 200);
             transition: all 0.3s;
           }
-          
+
           .form__input:placeholder-shown + .form__label {
             opacity: 0;
             visibility: hidden;
@@ -149,12 +162,20 @@ function ContactForm() {
             transform: translateY(-4rem);
           }
 
-          textarea:focus, input:focus{
+          textarea:focus,
+          input:focus {
             outline: none;
           }
 
-          .btnSeccion{
-            color: rgba(0,0,0,0.8);
+          .btnSeccion {
+            color: rgba(0, 0, 0, 0.8);
+          }
+
+          .btn-send {
+            background-color: rgb(125, 125, 200);
+          }
+          .btn-send:hover {
+            background-color: rgb(100, 100, 200);
           }
         `}
       </style>

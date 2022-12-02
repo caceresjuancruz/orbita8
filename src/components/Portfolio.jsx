@@ -10,11 +10,11 @@ function Portfolio() {
           <img
             src="perfil-png.png"
             alt="Orbita8"
-            className="img float-start mt-2"
+            className="img float-start m-2 logo-shadow"
             style={{ width: "5rem" }}
           />
         </NavLink>
-        <NavLink to="/" className="text-dark d-inline-block ms-auto mt-2">
+        <NavLink to="/" className="text-dark d-inline-block ms-auto m-2">
           <TfiClose className="text-light" size={30} />
         </NavLink>
       </div>
@@ -22,7 +22,7 @@ function Portfolio() {
       <h2 className="text-light fw-light">Trabajos realizados</h2>
       <div class="row row-cols-1 row-cols-md-3 g-5 m-5">
         <div class="col">
-          <div class="card h-100 rounded-4 border-0 shadow">
+          <div class="card h-100 rounded-4 border-0 shadow-lg" role="button">
             <img
               src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
               class="card-img-top rounded-4"
@@ -31,7 +31,7 @@ function Portfolio() {
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 rounded-4 border-0 shadow">
+          <div class="card h-100 rounded-4 border-0 shadow-lg" role="button">
             <img
               src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp"
               class="card-img-top rounded-4"
@@ -40,7 +40,7 @@ function Portfolio() {
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 rounded-4 border-0 shadow">
+          <div class="card h-100 rounded-4 border-0 shadow-lg" role="button">
             <img
               src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp"
               class="card-img-top rounded-4"
@@ -49,7 +49,7 @@ function Portfolio() {
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 rounded-4 border-0 shadow">
+          <div class="card h-100 rounded-4 border-0 shadow-lg" role="button">
             <img
               src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp"
               class="card-img-top rounded-4"
@@ -58,6 +58,14 @@ function Portfolio() {
           </div>
         </div>
       </div>
+      <style jsx="true">
+        {`
+          .logo-shadow {
+            -webkit-filter: drop-shadow(0 1rem 3rem rgba(#000, 0.175));
+            filter: drop-shadow(0 1rem 3rem rgba(#000, 0.175));
+          }
+        `}
+      </style>
     </div>
   );
 }

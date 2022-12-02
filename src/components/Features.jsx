@@ -11,7 +11,9 @@ function Features() {
           </div>
         </div>
         <div className="col-md-11">
-          <li className="fs-1 fw-bold ms-4">Desarrollo Web Personalizado</li>
+          <li className="fs-1 fw-bold ms-4 font-feature">
+            Desarrollo Web Personalizado
+          </li>
         </div>
       </div>
 
@@ -22,7 +24,9 @@ function Features() {
           </div>
         </div>
         <div className="col-md-11">
-          <li className="fs-1 fw-bold ms-4">Comercio Electrónico</li>
+          <li className="fs-1 fw-bold ms-4 font-feature">
+            Comercio Electrónico
+          </li>
         </div>
       </div>
 
@@ -33,7 +37,7 @@ function Features() {
           </div>
         </div>
         <div className="col-md-11">
-          <li className="fs-1 fw-bold ms-4">
+          <li className="fs-1 fw-bold ms-4 font-feature">
             Diseño Responsive y Optimización
           </li>
         </div>
@@ -46,10 +50,12 @@ function Features() {
           </div>
         </div>
         <div className="col-md-11">
-          <li className="fs-1 fw-bold ms-4">Posicionamiento en Buscadores</li>
+          <li className="fs-1 fw-bold ms-4 font-feature">
+            Posicionamiento en Buscadores
+          </li>
         </div>
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           .icon {
             display: none;
@@ -59,6 +65,18 @@ function Features() {
             .icon {
               display: inline;
             }
+          }
+
+          .font-feature {
+            background-image: linear-gradient(
+              90deg,
+              rgba(140, 0, 170, 1) 0%,
+              rgba(122, 41, 193, 1) 71%,
+              rgba(116, 56, 201, 1) 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
           }
         `}
       </style>

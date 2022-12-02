@@ -12,7 +12,21 @@ body {
     rgba(152, 68, 183, 1) 51%,
     rgba(255, 53, 127, 1) 100%
   );
+  backdrop-filter: blur(10px);
+
   animation: AnimateBG 20s ease infinite;
+}
+
+.bg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+  opacity: 0.55;
+  z-index: -1;
 }
 
 @keyframes AnimateBG {
