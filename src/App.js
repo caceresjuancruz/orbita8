@@ -3,6 +3,7 @@ import Features from "./components/Features";
 import ContactForm from "./components/ContactForm";
 import Main from "./components/Main";
 import Portfolio from "./components/Portfolio";
+import "animate.css";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />} />
               </Routes>
             </div>
-            <div className="col-12 col-xl-3 vh-100 p-0">
+            <div className="col-12 col-xl-3 vh-100 p-0 shadow-lg">
               <div className="container">
                 <Routes>
                   <Route path="/" element={<Features />} />

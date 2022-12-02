@@ -1,13 +1,22 @@
 import React from "react";
-import { FaShoppingCart, FaTools, FaSearch, FaDesktop } from "react-icons/fa";
+
+import ComputerImg from "../utils/assets/computer.png";
+import CardImg from "../utils/assets/card.png";
+import ZoomImg from "../utils/assets/zoom.png";
+import SettingsImg from "../utils/assets/settings.png";
 
 function Features() {
   return (
-    <ul className="list-unstyled vstack gap-3">
+    <ul className="list-unstyled vstack gap-3" id="features">
       <div className="row d-flex align-items-center my-5">
         <div className="col-md-1 position-relative">
-          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle icon">
-            <FaDesktop className="text-white" size={60} />
+          <div className="position-absolute top-50 start-0 translate-middle icon">
+            <img
+              className="animate__animated animate__rotateIn"
+              src={ComputerImg}
+              style={{ width: "7rem" }}
+              alt="Computer"
+            />
           </div>
         </div>
         <div className="col-md-11">
@@ -19,8 +28,13 @@ function Features() {
 
       <div className="row d-flex align-items-center my-5">
         <div className="col-md-1 position-relative">
-          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle icon">
-            <FaShoppingCart className="text-white" size={60} />
+          <div className=" position-absolute top-50 start-0 translate-middle icon">
+            <img
+              className="animate__animated animate__rotateIn"
+              src={CardImg}
+              style={{ width: "7rem" }}
+              alt="Card"
+            />
           </div>
         </div>
         <div className="col-md-11">
@@ -32,8 +46,13 @@ function Features() {
 
       <div className="row d-flex align-items-center my-5">
         <div className="col-md-1 position-relative">
-          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle icon">
-            <FaTools className="text-white" size={60} />
+          <div className="position-absolute top-50 start-0 translate-middle icon">
+            <img
+              className="animate__animated animate__rotateIn"
+              src={SettingsImg}
+              style={{ width: "7rem" }}
+              alt="Settings"
+            />
           </div>
         </div>
         <div className="col-md-11">
@@ -45,8 +64,13 @@ function Features() {
 
       <div className="row d-flex align-items-center my-5">
         <div className="col-md-1 position-relative">
-          <div className="bg-dark p-3 rounded-circle position-absolute top-50 start-0 translate-middle icon">
-            <FaSearch className="text-white" size={60} />
+          <div className="position-absolute top-50 start-0 translate-middle icon">
+            <img
+              className="animate__animated animate__rotateIn"
+              src={ZoomImg}
+              style={{ width: "7rem" }}
+              alt="Zoom"
+            />
           </div>
         </div>
         <div className="col-md-11">

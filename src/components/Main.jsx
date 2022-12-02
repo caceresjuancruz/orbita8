@@ -21,31 +21,40 @@ function Main() {
         ></button>
       </div>
       <img
-        className="img-fluid img-main"
+        className="img-fluid img-main animate__animated animate__fadeInDown"
         src="horizontal-blanco-png.png"
         alt="Orbita8"
       />
-      <h2 className="text-light fs-1 m-0">Web Design Agency</h2>
-      <h5 className="text-light fw-light fs-4 m-0">
-        Nos dedicamos a plasmar tu idea en la web.
-      </h5>
-      <NavLink to="/form">
+      <div
+        className="animate__animated animate__fadeIn"
+        style={{ animationDuration: "5s" }}
+      >
+        <h2 className="text-light fs-1 m-0 ">Web Design Agency</h2>
+        <h5 className="text-light fw-light fs-4 m-0 ">
+          Nos dedicamos a plasmar tu idea en la web.
+        </h5>
+      </div>
+
+      <NavLink to="/form" className="container-one">
         <button
-          className="btn btn-lg btnPrincipal fw-bold rounded-4 mx-2 btn-main shadow-lg"
+          className="btn btn-lg fw-bold rounded-4 mx-2 btn-main shadow-lg position-relative animate__animated animate__backInUp"
           onClick={() => window.scrollTo(0, document.body.scrollHeight)}
+          style={{ overflow: "hidden" }}
         >
           <h3 className="fw-bold fs-1 text-light">Quiero mi sitio</h3>
+          <div className="fill-one"></div>
         </button>
       </NavLink>
       <NavLink to="/portfolio">
-        <button className="btn bg-white rounded-4 mx-2 btn-main shadow-lg">
+        <button className="btn bg-white rounded-4 mx-2 btn-main shadow-lg animate__animated animate__backInUp">
           <h3 className="fw-light fs-1">Nuestros trabajos</h3>
         </button>
       </NavLink>
       <IoIosArrowDropdownCircle
-        className="mx-auto mt-5 text-light mainIcon"
+        className="mx-auto mt-5 text-light mainIcon animate__animated animate__bounceInUp"
         size={80}
         onClick={() => window.scrollTo(0, document.body.scrollHeight)}
+        style={{ animationDuration: "3s" }}
       />
       <style jsx="true">
         {`
@@ -55,13 +64,15 @@ function Main() {
 
           .btn-main {
             margin-top: 1rem;
+            width: 15rem;
+            height: 6rem;
           }
           .btn-main:hover {
             color: rgb(125, 125, 200);
           }
 
           .mobile-main {
-            margin-top: 40%;
+            margin-top: 35%;
           }
 
           .mainIcon {
@@ -91,30 +102,21 @@ function Main() {
             filter: drop-shadow(0 1rem 3rem rgba(#000, 0.175));
           }
 
-          .btnPrincipal {
-            background: rgb(140, 0, 170);
-            background: -moz-linear-gradient(
-              90deg,
-              rgba(140, 0, 170, 1) 0%,
-              rgba(122, 41, 193, 1) 71%,
-              rgba(116, 56, 201, 1) 100%
-            );
-            background: -webkit-linear-gradient(
-              90deg,
-              rgba(140, 0, 170, 1) 0%,
-              rgba(122, 41, 193, 1) 71%,
-              rgba(116, 56, 201, 1) 100%
-            );
-            background: linear-gradient(
-              90deg,
-              rgba(140, 0, 170, 1) 0%,
-              rgba(122, 41, 193, 1) 71%,
-              rgba(116, 56, 201, 1) 100%
-            );
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8c00aa",endColorstr="#7438c9",GradientType=1);
+          .fill-one {
+            position: absolute;
+            background-image: linear-gradient(to right, #e040fb, #00bcd4);
+            height: 200rem;
+            width: 50rem;
+            border-radius: 5px;
+            margin: -100rem 0 0 -140px;
+            z-index: -1;
+            transition: all 0.4s ease;
           }
 
-          .btnPrincipal:hover {
+          .container-one:hover .fill-one {
+            -webkit-transform: translateX(100px);
+            -moz-transform: translateX(100px);
+            transform: translateX(100px);
           }
         `}
       </style>

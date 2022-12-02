@@ -53,7 +53,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="d-flex min-vh-100">
+    <div className="d-flex min-vh-100 animate__animated animate__bounceInDown">
       <div className="m-2 p-2 w-100 rounded-4" id="form-container">
         <div className="d-flex align-items-center mb-3">
           <h1 className="d-inline-block w-100 text-center btnSeccion fw-bold">
