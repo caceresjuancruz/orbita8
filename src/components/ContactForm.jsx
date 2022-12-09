@@ -72,6 +72,7 @@ function ContactForm() {
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
+
           <div className="mb-3">
             <input
               class="form__input rounded-3 shadow-lg"
@@ -84,6 +85,7 @@ function ContactForm() {
               Nombre
             </label>
           </div>
+
           <div className="mb-3">
             <input
               class="form__input rounded-3 shadow-lg"
@@ -96,17 +98,19 @@ function ContactForm() {
               Telefono
             </label>
           </div>
+
           <div className="mb-3">
+            <label for="email_id" class="form__label">
+              Email
+            </label>
             <input
               class="form__input rounded-3 shadow-lg"
               type="email"
+              id="email_id"
               name="user_email"
               placeholder="Email"
               required
             />
-            <label for="name" class="form__label">
-              Email
-            </label>
           </div>
 
           <div className="mb-3">
@@ -122,6 +126,7 @@ function ContactForm() {
             </label>
           </div>
 
+          
           <button
             type="submit"
             className={`btn btn-lg rounded-3 shadow-lg w-100 ${
@@ -148,12 +153,11 @@ function ContactForm() {
         {`
           .form__label {
             font-size: 1rem;
-            margin-left: 2rem;
-            margin-top: 0.7rem;
+            margin: 0 0 0.5rem 1rem;
             display: block;
             transition: all 0.3s;
             transform: translateY(0rem);
-            color: rgb(125, 125, 200);
+            color: white;
           }
 
           .form__input {
@@ -173,8 +177,8 @@ function ContactForm() {
           .form__input:placeholder-shown + .form__label {
             opacity: 0;
             visibility: hidden;
-            -webkit-transform: translateY(-4rem);
-            transform: translateY(-4rem);
+            -webkit-transform: translateY(+4rem);
+            transform: translateY(+4rem);
           }
 
           textarea:focus,

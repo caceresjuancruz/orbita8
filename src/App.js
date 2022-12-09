@@ -10,9 +10,9 @@ function App() {
     <div className="App">
       <Router>
         <div className="container-fluid">
-          <div className="row bg">
+          <div className="row bg bg-prueba">
             <div
-              className="col-12 col-xl-9 vh-100 text-center p-0"
+              className="col-12 col-xl-8 vh-100 text-center p-0"
               id="main-col"
             >
               <Routes>
@@ -21,8 +21,7 @@ function App() {
               </Routes>
             </div>
             <div
-              className="col-12 col-xl-3 vh-100 p-0 "
-              style={{ background: "transparent" }}
+              className="col-12 col-xl-4 vh-100 p-0 d-flex align-items-center"
             >
               <div className="container">
                 <Routes>
