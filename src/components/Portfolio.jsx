@@ -62,7 +62,7 @@ function Portfolio() {
       </h2>
       <div className="row row-cols-1 row-cols-md-3 g-5 works-container">
         {works.map((work, index) => (
-          <div className="col">
+          <div className="col" key={index}>
             <div className="wrapper">
               <div
                 className="card border-0 rounded-4 shadow-lg"

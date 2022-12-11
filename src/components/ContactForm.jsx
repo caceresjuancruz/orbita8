@@ -91,7 +91,7 @@ function ContactForm() {
               placeholder="Nombre"
               required
             />
-            <label for="name" className="form__label">
+            <label htmlFor="name" className="form__label">
               Nombre
             </label>
           </div>
@@ -104,13 +104,13 @@ function ContactForm() {
               placeholder="Telefono"
               required
             />
-            <label for="name" className="form__label">
+            <label htmlFor="name" className="form__label">
               Telefono
             </label>
           </div>
 
           <div className="mb-3">
-            <label for="email_id" className="form__label">
+            <label htmlFor="email_id" className="form__label">
               Email
             </label>
             <input
@@ -131,7 +131,7 @@ function ContactForm() {
               placeholder="Mensaje"
               required
             ></textarea>
-            <label for="name" className="form__label">
+            <label htmlFor="name" className="form__label">
               Mensaje
             </label>
           </div>

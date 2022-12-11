@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 
 function Features() {
@@ -8,7 +8,7 @@ function Features() {
       id="features"
     >
       <div
-        className="row d-flex align-items-center feature shadow-lg animate__animated animate__fadeInLeft"
+        className="row d-flex align-items-center feature shadow-lg "
         role="button"
       >
         <div className="col-12 text-center col-md-1 p-0 position-relative">
@@ -25,7 +25,7 @@ function Features() {
       </div>
 
       <div
-        className="row d-flex align-items-center feature feature-2 shadow-lg animate__animated animate__fadeInLeft"
+        className="row d-flex align-items-center feature feature-2 shadow-lg "
         role="button"
         style={{ animationDuration: "2s" }}
       >
@@ -46,7 +46,7 @@ function Features() {
       </div>
 
       <div
-        className="row d-flex align-items-center feature feature-2 shadow-lg animate__animated animate__fadeInLeft"
+        className="row d-flex align-items-center feature feature-2 shadow-lg "
         role="button"
         style={{ animationDuration: "3s" }}
       >
@@ -67,7 +67,7 @@ function Features() {
       </div>
 
       <div
-        className="row d-flex align-items-center p-0 feature shadow-lg animate__animated animate__fadeInLeft"
+        className="row d-flex align-items-center p-0 feature shadow-lg "
         role="button"
         style={{ animationDuration: "4s" }}
       >

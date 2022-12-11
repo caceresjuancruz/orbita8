@@ -51,7 +51,7 @@ function Main() {
             id="myModal"
             className="modal fade show"
             style={{ display: "none" }}
-            ariaModal={true}
+            aria-modal={true}
           >
             <div className="modal-dialog modal-confirm ">
               <div className="modal-content">
