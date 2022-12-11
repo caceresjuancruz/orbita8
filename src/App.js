@@ -20,9 +20,7 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio />} />
               </Routes>
             </div>
-            <div
-              className="col-12 col-xl-4 vh-100 p-0 d-flex align-items-center"
-            >
+            <div className="col-12 col-xl-4 vh-100 p-0 d-flex align-items-center">
               <div className="container">
                 <Routes>
                   <Route path="/" element={<Features />} />
@@ -34,6 +32,7 @@ function App() {
           </div>
         </div>
       </Router>
+      <style jsx="true">{``}</style>
     </div>
   );
 }

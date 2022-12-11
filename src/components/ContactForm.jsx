@@ -15,7 +15,8 @@ function ContactForm() {
     setTimeout(() => {
       setSuccessAnimationStopped(true);
       navigate("/");
-      document.getElementById("alerta").style.display = "inline";
+      document.getElementById("myModal").style.display = "block";
+      document.getElementById("modalBack").style.display = "block";
       window.scrollTo({ top: 0, behavior: "smooth" });
     }, 2000);
   };
@@ -54,8 +55,8 @@ function ContactForm() {
 
   return (
     <div
-      className="d-flex  animate__animated animate__bounceInDown"
-      style={{ marginTop: "5rem" }}
+      className="d-flex animate__animated animate__fadeInDownBig"
+      id="formfull"
     >
       <div className="m-2 p-2 w-100 rounded-4" id="form-container">
         <div className="d-flex align-items-center mb-3">
@@ -63,48 +64,57 @@ function ContactForm() {
             Contacto
           </h1>
           <NavLink
-            to="/"
             className="text-dark d-inline-block ms-auto"
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => {
+              window.scrollTo(0, 0);
+              document
+                .getElementById("formfull")
+                .classList.remove("animate__fadeInDownBig");
+              document
+                .getElementById("formfull")
+                .classList.add("animate__fadeOutUpBig");
+              setTimeout(() => {
+                navigate("/");
+              }, 1000);
+            }}
           >
             <TfiClose className="text-light" size={30} />
           </NavLink>
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
-
           <div className="mb-3">
             <input
-              class="form__input rounded-3 shadow-lg"
+              className="form__input rounded-3 shadow-lg"
               type="text"
               name="user_name"
               placeholder="Nombre"
               required
             />
-            <label for="name" class="form__label">
+            <label for="name" className="form__label">
               Nombre
             </label>
           </div>
 
           <div className="mb-3">
             <input
-              class="form__input rounded-3 shadow-lg"
+              className="form__input rounded-3 shadow-lg"
               type="text"
               name="user_phone"
               placeholder="Telefono"
               required
             />
-            <label for="name" class="form__label">
+            <label for="name" className="form__label">
               Telefono
             </label>
           </div>
 
           <div className="mb-3">
-            <label for="email_id" class="form__label">
+            <label for="email_id" className="form__label">
               Email
             </label>
             <input
-              class="form__input rounded-3 shadow-lg"
+              className="form__input rounded-3 shadow-lg"
               type="email"
               id="email_id"
               name="user_email"
@@ -115,18 +125,17 @@ function ContactForm() {
 
           <div className="mb-3">
             <textarea
-              class="form__input rounded-3 shadow-lg"
+              className="form__input rounded-3 shadow-lg"
               name="message"
               rows="3"
               placeholder="Mensaje"
               required
             ></textarea>
-            <label for="name" class="form__label">
+            <label for="name" className="form__label">
               Mensaje
             </label>
           </div>
 
-          
           <button
             type="submit"
             className={`btn btn-lg rounded-3 shadow-lg w-100 ${
@@ -136,7 +145,7 @@ function ContactForm() {
           >
             {successAnimationStopped ? (
               <div className="text-light fs-4 fw-bold">
-                Enviar <i class="bi bi-send-fill"></i>
+                Enviar <i className="bi bi-send-fill"></i>
               </div>
             ) : (
               <Lottie
@@ -149,7 +158,7 @@ function ContactForm() {
           </button>
         </form>
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           .form__label {
             font-size: 1rem;
