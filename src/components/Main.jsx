@@ -109,7 +109,9 @@ function Main() {
           <NavLink to="/form" className="container-one">
             <button
               className="btn btn-lg fw-bold rounded-4 mx-2 btn-main shadow-lg position-relative animate__animated animate__slideInUp animate__slow"
-              onClick={() => window.scrollTo(0, document.body.scrollHeight)}
+              onClick={() => {
+                window.scrollTo(0, document.body.scrollHeight);
+              }}
               style={{ overflow: "hidden" }}
             >
               <h3 className="fw-bold display-5 text-light">Quiero mi sitio</h3>

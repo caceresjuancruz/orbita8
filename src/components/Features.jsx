@@ -1,14 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 
 function Features() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+  });
+
   return (
     <ul
       className="list-unstyled vstack gap-3 gap-md-3 text-light m-0"
       id="features"
     >
       <div
-        className="row d-flex align-items-center feature shadow-lg "
+        className={`row d-flex align-items-center feature shadow-lg ${
+          isLoading ? "animate__animated animate__fadeInLeft" : ""
+        }`}
         role="button"
       >
         <div className="col-12 text-center col-md-1 p-0 position-relative">
@@ -19,13 +29,15 @@ function Features() {
             alt="Gear"
           />
         </div>
-        <div className="col-12 col-md-11 text-center text-md-start">
+        <div className="col-12 col-md-11 text-start text-md-start">
           <li className="feature-text">DESARROLLO WEB PERSONALIZADO</li>
         </div>
       </div>
 
       <div
-        className="row d-flex align-items-center feature feature-2 shadow-lg "
+        className={`row d-flex align-items-center feature feature-2 shadow-lg ${
+          isLoading ? "animate__animated animate__fadeInLeft" : ""
+        }`}
         role="button"
         style={{ animationDuration: "2s" }}
       >
@@ -40,13 +52,15 @@ function Features() {
             alt="World Wide"
           />
         </div>
-        <div className="col-12 col-md-11 text-center text-md-start">
+        <div className="col-12 col-md-11 text-start text-md-start">
           <li className="feature-text">COMERCIO ELECTRÓNICO</li>
         </div>
       </div>
 
       <div
-        className="row d-flex align-items-center feature feature-2 shadow-lg "
+        className={`row d-flex align-items-center feature feature-2 shadow-lg ${
+          isLoading ? "animate__animated animate__fadeInLeft" : ""
+        }`}
         role="button"
         style={{ animationDuration: "3s" }}
       >
@@ -61,13 +75,15 @@ function Features() {
             alt="Browser"
           />
         </div>
-        <div className="col-12 col-md-11 text-center text-md-start">
+        <div className="col-12 col-md-11 text-start text-md-start">
           <li className="feature-text">DISEÑO RESPONSIVE Y OPTIMIZACIÓN</li>
         </div>
       </div>
 
       <div
-        className="row d-flex align-items-center p-0 feature shadow-lg "
+        className={`row d-flex align-items-center p-0 feature shadow-lg ${
+          isLoading ? "animate__animated animate__fadeInLeft" : ""
+        }`}
         role="button"
         style={{ animationDuration: "4s" }}
       >
@@ -82,7 +98,7 @@ function Features() {
             alt="List"
           />
         </div>
-        <div className="col-12 col-md-11 text-center text-md-start">
+        <div className="col-12 col-md-11 text-start text-md-start">
           <li className="feature-text">POSICIONAMIENTO EN BUSCADORES</li>
         </div>
       </div>

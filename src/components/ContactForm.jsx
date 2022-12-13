@@ -83,7 +83,7 @@ function ContactForm() {
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
-          <div className="mb-3">
+          <div className="mb-4">
             <input
               className="form__input rounded-3 shadow-lg"
               type="text"
@@ -96,7 +96,7 @@ function ContactForm() {
             </label>
           </div>
 
-          <div className="mb-3">
+          <div className="mb-4">
             <input
               className="form__input rounded-3 shadow-lg"
               type="text"
@@ -109,7 +109,7 @@ function ContactForm() {
             </label>
           </div>
 
-          <div className="mb-3">
+          <div className="mb-4">
             <label htmlFor="email_id" className="form__label">
               Email
             </label>
@@ -123,7 +123,7 @@ function ContactForm() {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="mb-4">
             <textarea
               className="form__input rounded-3 shadow-lg"
               name="message"
@@ -163,10 +163,11 @@ function ContactForm() {
           .form__label {
             font-size: 1rem;
             margin: 0 0 0.5rem 1rem;
-            display: block;
+            display: none;
             transition: all 0.3s;
             transform: translateY(0rem);
             color: white;
+            visibility: hidden;
           }
 
           .form__input {
@@ -183,8 +184,8 @@ function ContactForm() {
             transition: all 0.3s;
           }
 
-          .form__input:placeholder-shown + .form__label {
-            opacity: 0;
+          .form__input:focus .form__label {
+            opacity: 1;
             visibility: hidden;
             -webkit-transform: translateY(+4rem);
             transform: translateY(+4rem);

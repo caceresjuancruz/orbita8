@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 function Portfolio() {
@@ -15,36 +15,18 @@ function Portfolio() {
     },
   ];
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, works.length * 1000);
+  });
+
   return (
     <div className="">
       <div className="d-flex o8icon-container">
-        <NavLink
-          to="/"
-          // onClick={() => {
-          //   document
-          //     .getElementsByClassName("o8icon")
-          //     .classList.remove("animate__backInLeft");
-          //   document
-          //     .getElementsByClassName("o8icon")
-          //     .classList.add("animate__backOutLeft");
-
-          //   document
-          //     .getElementsByClassName("card")
-          //     .classList.add("animate__fadeOutDown");
-
-          //   document
-          //     .getElementsById("trabajosrealizados")
-          //     .classList.remove("animate__fadeIn");
-
-          //   document
-          //     .getElementsById("trabajosrealizados")
-          //     .classList.add("animate__fadeOut");
-
-          //   setTimeout(() => {
-          //     navigate("/");
-          //   }, 1000);
-          // }}
-        >
+        <NavLink to="/">
           <img
             src="perfil-png.png"
             alt="Orbita8"
@@ -65,7 +47,9 @@ function Portfolio() {
           <div className="col" key={index}>
             <div className="wrapper">
               <div
-                className="card border-0 rounded-4 shadow-lg"
+                className={`card border-0 rounded-4 shadow-lg ${
+                  isLoading ? "animate__animated animate__fadeInUp" : ""
+                }`}
                 style={{ animationDuration: `${index + 1}s` }}
                 role="button"
                 onClick={() => {
