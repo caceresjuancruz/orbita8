@@ -16,10 +16,13 @@ function Features() {
       id="features"
     >
       <div
-        className={`row d-flex align-items-center feature shadow-lg ${
+        className={`row d-flex align-items-center feature user-select-none shadow-lg ${
           isLoading ? "animate__animated animate__fadeInLeft" : ""
         }`}
         role="button"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#modal"
       >
         <div className="col-12 text-center col-md-1 p-0 position-relative">
           <img
@@ -29,13 +32,17 @@ function Features() {
             alt="Gear"
           />
         </div>
-        <div className="col-12 col-md-11 text-start text-md-start">
+        <div className="col-12 col-md-11 text-center text-md-start">
           <li className="feature-text">DESARROLLO WEB PERSONALIZADO</li>
         </div>
       </div>
 
+      {/* Modal Desarrollo Web Personalizado Start*/}
+
+      {/* Modal Desarrollo Web Personalizado End*/}
+
       <div
-        className={`row d-flex align-items-center feature feature-2 shadow-lg ${
+        className={`row d-flex align-items-center feature user-select-none feature-2 shadow-lg ${
           isLoading ? "animate__animated animate__fadeInLeft" : ""
         }`}
         role="button"
@@ -52,13 +59,17 @@ function Features() {
             alt="World Wide"
           />
         </div>
-        <div className="col-12 col-md-11 text-start text-md-start">
+        <div className="col-12 col-md-11 text-center text-md-start">
           <li className="feature-text">COMERCIO ELECTRÓNICO</li>
         </div>
       </div>
 
+      {/* Modal COMERCIO ELECTRÓNICO Start*/}
+
+      {/* Modal COMERCIO ELECTRÓNICO End*/}
+
       <div
-        className={`row d-flex align-items-center feature feature-2 shadow-lg ${
+        className={`row d-flex align-items-center feature user-select-none feature-2 shadow-lg ${
           isLoading ? "animate__animated animate__fadeInLeft" : ""
         }`}
         role="button"
@@ -75,13 +86,17 @@ function Features() {
             alt="Browser"
           />
         </div>
-        <div className="col-12 col-md-11 text-start text-md-start">
+        <div className="col-12 col-md-11 text-center text-md-start">
           <li className="feature-text">DISEÑO RESPONSIVE Y OPTIMIZACIÓN</li>
         </div>
       </div>
 
+      {/* Modal DISEÑO RESPONSIVE Y OPTIMIZACIÓN Start*/}
+
+      {/* Modal DISEÑO RESPONSIVE Y OPTIMIZACIÓN End*/}
+
       <div
-        className={`row d-flex align-items-center p-0 feature shadow-lg ${
+        className={`row d-flex align-items-center p-0 feature user-select-none shadow-lg ${
           isLoading ? "animate__animated animate__fadeInLeft" : ""
         }`}
         role="button"
@@ -98,10 +113,15 @@ function Features() {
             alt="List"
           />
         </div>
-        <div className="col-12 col-md-11 text-start text-md-start">
+        <div className="col-12 col-md-11 text-center text-md-start">
           <li className="feature-text">POSICIONAMIENTO EN BUSCADORES</li>
         </div>
       </div>
+
+      {/* Modal POSICIONAMIENTO EN BUSCADORES Start*/}
+
+      {/* Modal POSICIONAMIENTO EN BUSCADORES End*/}
+
       <IoIosArrowDropupCircle
         className="mx-auto mt-5 border rounded-circle shadow-lg p-0 text-light mainIconUp animate__animated animate__fadeInUpBig"
         size={60}

@@ -55,8 +55,9 @@ function ContactForm() {
 
   return (
     <div
-      className="d-flex animate__animated animate__fadeInDownBig"
+      className="d-flex animate__animated animate__fadeInDownBig border rounded-4 p-3"
       id="formfull"
+      style={{ maxWidth: "36rem" }}
     >
       <div className="m-2 p-2 w-100 rounded-4" id="form-container">
         <div className="d-flex align-items-center mb-3">
@@ -85,7 +86,7 @@ function ContactForm() {
         <form ref={form} onSubmit={sendEmail}>
           <div className="mb-4">
             <input
-              className="form__input rounded-3 shadow-lg"
+              className="form__input rounded-3 "
               type="text"
               name="user_name"
               placeholder="Nombre"
@@ -98,7 +99,7 @@ function ContactForm() {
 
           <div className="mb-4">
             <input
-              className="form__input rounded-3 shadow-lg"
+              className="form__input rounded-3 "
               type="text"
               name="user_phone"
               placeholder="Telefono"
@@ -114,7 +115,7 @@ function ContactForm() {
               Email
             </label>
             <input
-              className="form__input rounded-3 shadow-lg"
+              className="form__input rounded-3 "
               type="email"
               id="email_id"
               name="user_email"
@@ -125,7 +126,7 @@ function ContactForm() {
 
           <div className="mb-4">
             <textarea
-              className="form__input rounded-3 shadow-lg"
+              className="form__input rounded-3 "
               name="message"
               rows="3"
               placeholder="Mensaje"
@@ -138,7 +139,7 @@ function ContactForm() {
 
           <button
             type="submit"
-            className={`btn btn-lg rounded-3 shadow-lg w-100 ${
+            className={`btn btn-lg rounded-3  w-100 ${
               successAnimationStopped ? "btn-send" : "btn-success"
             }`}
             style={{ height: "5rem" }}
