@@ -11,19 +11,16 @@ function App() {
       <Router>
         <div className="container-fluid">
           <div className="row bg bg-prueba">
-            <div
-              className="col-12 col-xl-8 vh-100 text-center p-0"
-              id="main-col"
-            >
+            <div className="col-12 col-xl-8 text-center p-0" id="main-col">
               <Routes>
                 <Route path="/*" element={<Main />} />
                 <Route path="/portfolio" element={<Portfolio />} />
               </Routes>
             </div>
-            <div className="col-12 col-xl-4 vh-100 p-0 d-flex align-items-center">
+            <div className="col-12 col-xl-4 p-0 d-flex align-items-center">
               <div className="container">
                 <Routes>
-                  <Route path="/" element={<Features />} />
+                  <Route path="/*" element={<Features />} />
                   <Route path="/form" element={<ContactForm />} />
                   <Route path="/portfolio" element={<Features />} />
                 </Routes>

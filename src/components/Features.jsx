@@ -24,7 +24,7 @@ function Features() {
         data-bs-toggle="modal"
         data-bs-target="#modal"
       >
-        <div className="col-12 text-center col-md-1 p-0 position-relative">
+        <div className="col-2 text-center col-md-1 p-0 position-relative">
           <img
             src={"ajustes.png"}
             className="feature-icon animate__animated animate__rotateIn"
@@ -32,7 +32,7 @@ function Features() {
             alt="Gear"
           />
         </div>
-        <div className="col-12 col-md-11 text-center text-md-start">
+        <div className="col-10 col-md-11 text-center text-md-start">
           <li className="feature-text">DESARROLLO WEB PERSONALIZADO</li>
         </div>
       </div>
@@ -48,7 +48,7 @@ function Features() {
         role="button"
         style={{ animationDuration: "2s" }}
       >
-        <div className="col-12 text-center col-md-1 p-0 position-relative">
+        <div className="col-2 text-center col-md-1 p-0 position-relative">
           <img
             className="feature-icon animate__animated animate__rotateIn"
             src={"internet.png"}
@@ -59,7 +59,7 @@ function Features() {
             alt="World Wide"
           />
         </div>
-        <div className="col-12 col-md-11 text-center text-md-start">
+        <div className="col-10 col-md-11 text-center text-md-start">
           <li className="feature-text">COMERCIO ELECTRÓNICO</li>
         </div>
       </div>
@@ -75,7 +75,7 @@ function Features() {
         role="button"
         style={{ animationDuration: "3s" }}
       >
-        <div className="col-12 text-center col-md-1 p-0 position-relative">
+        <div className="col-2 text-center col-md-1 p-0 position-relative">
           <img
             src={"navegador.png"}
             className="feature-icon animate__animated animate__rotateIn"
@@ -86,7 +86,7 @@ function Features() {
             alt="Browser"
           />
         </div>
-        <div className="col-12 col-md-11 text-center text-md-start">
+        <div className="col-10 col-md-11 text-center text-md-start">
           <li className="feature-text">DISEÑO RESPONSIVE Y OPTIMIZACIÓN</li>
         </div>
       </div>
@@ -102,7 +102,7 @@ function Features() {
         role="button"
         style={{ animationDuration: "4s" }}
       >
-        <div className="col-12 text-center col-md-1 p-0">
+        <div className="col-2 text-center col-md-1 p-0">
           <img
             src={"lista.png"}
             className="feature-icon animate__animated animate__rotateIn"
@@ -113,7 +113,7 @@ function Features() {
             alt="List"
           />
         </div>
-        <div className="col-12 col-md-11 text-center text-md-start">
+        <div className="col-10 col-md-11 text-center text-md-start">
           <li className="feature-text">POSICIONAMIENTO EN BUSCADORES</li>
         </div>
       </div>
@@ -123,13 +123,18 @@ function Features() {
       {/* Modal POSICIONAMIENTO EN BUSCADORES End*/}
 
       <IoIosArrowDropupCircle
-        className="mx-auto mt-5 border rounded-circle shadow-lg p-0 text-light mainIconUp animate__animated animate__fadeInUpBig"
+        className="mx-auto mt-5 border rounded-circle shadow-lg p-0 text-light mainIconUp animate__animated animate__fadeInUpBig d-none"
         size={60}
         onClick={() => window.scrollTo(0, 0)}
         style={{ animationDuration: "2s" }}
       />
+      <div className="container my-5 bg-transparent footer-mobile"></div>
       <style jsx="true">
         {`
+          .footer-mobile {
+            display: block;
+          }
+
           .mainIconUp {
             display: inline;
           }
@@ -145,7 +150,7 @@ function Features() {
           }
 
           .feature-text {
-            font-size: 1.5rem;
+            font-size: 1rem;
             margin-bottom: 0.5rem;
             padding-left: 0.3rem;
             padding-right: 0.3rem;
@@ -154,7 +159,6 @@ function Features() {
           .feature-icon {
             width: 4rem;
             margin-left: 0;
-            margin-top: 0.5rem;
           }
 
           #features {
@@ -163,6 +167,10 @@ function Features() {
           }
 
           @media (min-width: 768px) {
+            .footer-mobile {
+              display: none;
+            }
+
             .mainIconUp {
               display: none;
             }

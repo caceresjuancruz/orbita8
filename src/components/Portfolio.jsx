@@ -62,28 +62,18 @@ function Portfolio() {
                 </div>
               </div>
             </div>
-
-            {/* <div
-              class="card cardStyle h-100 rounded-4 border-0 shadow-lg animate__animated animate__fadeInUp"
-              role="button"
-              style={{ animationDuration: `${index + 1}s` }}
-            >
-              <img
-                src={work.imgUrl}
-                class="card-img-top rounded-4"
-                alt={work.workName}
-              />
-              <div className="info">
-                <h2>{work.workName}</h2>
-              </div>
-            </div> */}
           </div>
         ))}
       </div>
+      <div className="container my-5 bg-transparent footer-mobile"></div>
       <style jsx="true">
         {`
           #features {
             display: none;
+          }
+
+          .footer-mobile {
+            display: block;
           }
 
           .col {
@@ -168,6 +158,7 @@ function Portfolio() {
           .o8icon {
             width: 3rem;
             margin: 1rem 0 1rem 0;
+            transition: all 0.5s;
           }
 
           .works-container {
@@ -175,6 +166,10 @@ function Portfolio() {
           }
 
           @media (min-width: 768px) {
+            .footer-mobile {
+              display: none;
+            }
+
             #features {
               display: flex;
             }
@@ -188,8 +183,12 @@ function Portfolio() {
             }
 
             .o8icon {
-              width: 5rem;
+              width: 4rem;
               margin: 1rem 0 0 1rem;
+            }
+
+            .o8icon:hover {
+              width: 4.5rem;
             }
 
             .works-container {

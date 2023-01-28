@@ -9,8 +9,8 @@ function Main() {
     <Fragment>
       <div className="d-flex socials-container" role="button">
         <FaInstagramSquare
-          className="social-icon m-2 text-light animate__animated animate__fadeIn"
-          size={60}
+          className="social-icon my-2 mx-1 text-light animate__animated animate__fadeIn"
+          size={50}
           onClick={() => {
             window
               .open("https://www.instagram.com/orbita8.webdesign/", "_blank")
@@ -19,8 +19,8 @@ function Main() {
         />
 
         <FaFacebookSquare
-          className="social-icon m-2 text-light animate__animated animate__fadeIn"
-          size={60}
+          className="social-icon my-2 mx-1 text-light animate__animated animate__fadeIn"
+          size={50}
           onClick={() => {
             window
               .open("https://www.facebook.com/orbita8.webdesign/", "_blank")
@@ -129,7 +129,7 @@ function Main() {
           </NavLink>
 
           <IoIosArrowDropdownCircle
-            className="mx-auto mt-5 border rounded-circle shadow-lg p-0 text-light mainIcon animate__animated animate__fadeInUpBig"
+            className="mx-auto mt-5 border rounded-circle shadow-lg p-0 text-light mainIcon animate__animated animate__fadeInUpBig d-none"
             size={60}
             onClick={() => window.scrollTo(0, document.body.scrollHeight)}
             style={{ animationDuration: "2s" }}
@@ -224,6 +224,7 @@ function Main() {
               .social-icon:hover {
                 -webkit-filter: opacity(0.5);
                 filter: opacity(0.5);
+                transform: translateY(-2px);
               }
 
               .socials-container {
