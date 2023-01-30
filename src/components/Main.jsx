@@ -29,7 +29,7 @@ function Main() {
         />
       </div>
       <div className="padre d-flex justify-content-center">
-        <div className="mobile-main mb-5">
+        <div className="mobile-main mb-5 mt-0">
           <div
             className="alert alert-success-alt position-absolute m-2 top-0 shadow-lg"
             id="alerta"

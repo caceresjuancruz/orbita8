@@ -143,6 +143,8 @@ function Features() {
             border-radius: 100px;
             margin-left: 0.2rem;
             margin-right: 0.2rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
           }
           .feature:hover {
             background: rgba(0, 0, 0, 0.3);
