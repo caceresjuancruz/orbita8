@@ -128,7 +128,6 @@ function Features() {
         onClick={() => window.scrollTo(0, 0)}
         style={{ animationDuration: "2s" }}
       />
-      <div className="container my-5 bg-transparent footer-mobile"></div>
       <style jsx="true">
         {`
           .footer-mobile {
@@ -164,6 +163,7 @@ function Features() {
           }
 
           #features {
+            display: none;
             padding-right: 0;
             padding-top: 1rem;
           }
@@ -194,6 +194,7 @@ function Features() {
             }
 
             #features {
+              display: flex;
               padding-right: 1rem;
               padding-top: 0;
             }

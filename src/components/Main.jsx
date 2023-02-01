@@ -1,34 +1,22 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
+import { SlSocialFacebook } from "react-icons/sl";
+import { SlSocialInstagram } from "react-icons/sl";
+import ContactForm from "./ContactForm";
 
 function Main() {
   return (
     <Fragment>
-      <div className="d-flex socials-container" role="button">
-        <FaInstagramSquare
-          className="social-icon my-2 mx-1 text-light animate__animated animate__fadeIn"
-          size={50}
-          onClick={() => {
-            window
-              .open("https://www.instagram.com/orbita8.webdesign/", "_blank")
-              .focus();
-          }}
-        />
-
-        <FaFacebookSquare
-          className="social-icon my-2 mx-1 text-light animate__animated animate__fadeIn"
-          size={50}
-          onClick={() => {
-            window
-              .open("https://www.facebook.com/orbita8.webdesign/", "_blank")
-              .focus();
-          }}
-        />
+      <div
+        className="w-100 justify-content-center align-items-center h-100 position-absolute contactform-mobile"
+        style={{ zIndex: "100" }}
+      >
+        <div className="mx-1">
+          <ContactForm />
+        </div>
       </div>
-      <div className="padre d-flex justify-content-center">
+      <div className="d-flex justify-content-center h-100 align-items-center">
         <div className="mobile-main mb-5 mt-0">
           <div
             className="alert alert-success-alt position-absolute m-2 top-0 shadow-lg"
@@ -47,43 +35,48 @@ function Main() {
           </div>
 
           {/*<!-- Modal HTML -->*/}
+
           <div
             id="myModal"
             className="modal fade show"
             style={{ display: "none" }}
             aria-modal={true}
           >
-            <div className="modal-dialog modal-confirm ">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <div className="icon-box">
-                    <i className="material-icons">&#xE876;</i>
+            <div className="h-100 d-flex align-items-center">
+              <div className="modal-dialog modal-confirm mx-auto popUp">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <div className="icon-box">
+                      <i className="material-icons">&#xE876;</i>
+                    </div>
+                    <h4 className="modal-title w-100">
+                      <strong>¡Gracias por comunicarte con nosotros!</strong>
+                    </h4>
                   </div>
-                  <h4 className="modal-title w-100">
-                    <strong>¡Gracias por comunicarte con nosotros!</strong>
-                  </h4>
-                </div>
-                <div className="modal-body">
-                  <p className="text-center">
-                    Nos estaremos contactando contigo lo antes posible.
-                  </p>
-                </div>
-                <div className="modal-footer">
-                  <button
-                    className="btn btn-success btn-block"
-                    data-dismiss="modal"
-                    onClick={() => {
-                      document.getElementById("myModal").style.display = "none";
-                      document.getElementById("modalBack").style.display =
-                        "none";
-                    }}
-                  >
-                    OK
-                  </button>
+                  <div className="modal-body">
+                    <p className="text-center">
+                      Nos estaremos contactando contigo lo antes posible.
+                    </p>
+                  </div>
+                  <div className="modal-footer">
+                    <button
+                      className="btn btn-success btn-block"
+                      data-dismiss="modal"
+                      onClick={() => {
+                        document.getElementById("myModal").style.display =
+                          "none";
+                        document.getElementById("modalBack").style.display =
+                          "none";
+                      }}
+                    >
+                      OK
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div
             className="modal-backdrop fade show"
             id="modalBack"
@@ -128,6 +121,35 @@ function Main() {
             </button>
           </NavLink>
 
+          <div
+            className="socials-container mt-4 animate__animated animate__slideInUp animate__slow"
+            role="button"
+            style={{ animationDuration: "2.5s" }}
+          >
+            <SlSocialInstagram
+              className="social-icon my-3 mx-2 text-light bg-transparent bg-gradient bg-opacity-25 rounded-4 p-2 shadow-lg"
+              size={60}
+              onClick={() => {
+                window
+                  .open(
+                    "https://www.instagram.com/orbita8.webdesign/",
+                    "_blank"
+                  )
+                  .focus();
+              }}
+            />
+
+            <SlSocialFacebook
+              className="social-icon my-3 mx-2 text-light bg-transparent bg-gradient bg-opacity-25 rounded-4 p-2 shadow-lg"
+              size={60}
+              onClick={() => {
+                window
+                  .open("https://www.facebook.com/orbita8.webdesign/", "_blank")
+                  .focus();
+              }}
+            />
+          </div>
+
           <IoIosArrowDropdownCircle
             className="mx-auto mt-5 border rounded-circle shadow-lg p-0 text-light mainIcon animate__animated animate__fadeInUpBig d-none"
             size={60}
@@ -137,6 +159,15 @@ function Main() {
 
           <style jsx="true">
             {`
+              .popUp {
+                padding-left: 1rem;
+                padding-right: 1rem;
+              }
+
+              .contactform-mobile {
+                display: none;
+              }
+
               .modal-confirm {
                 color: #636363;
                 max-width: 320px;
@@ -255,6 +286,11 @@ function Main() {
               }
 
               @media (min-width: 768px) {
+                .popUp {
+                  padding-left: 0;
+                  padding-right: 0;
+                }
+
                 .socials-container {
                   justify-content: start;
                 }
